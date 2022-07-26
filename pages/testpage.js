@@ -1,5 +1,5 @@
 import Head from "next/head";
-import PrintPage from "../components/printPage";
+import PrintPage from "../components/printPage/printPage";
 import styled from "styled-components";
 
 const PageHeader = styled.div`
