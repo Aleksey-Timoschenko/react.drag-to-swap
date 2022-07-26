@@ -20,23 +20,21 @@ const DragPreview = styled.div`
   }
 `;
 
-const dropAnimation = {
+const DROP_ANIMATION = {
   duration: 0,
 }
 
-export const PrintPageDragOverlay = ({ activeDragItem }) => {
-  return (
-    <DragOverlay
-      activeDragItem={activeDragItem}
-      dropAnimation={dropAnimation}
-    >
-      {
-        ({ image }) => (
-          <DragPreview>
-            <img src={image} alt="" />
-          </DragPreview>
-        )
-      }
-    </DragOverlay>
-  )
-}
+export const PrintPageDragOverlay = ({ activeDragItem }) => (
+  <DragOverlay
+    activeDragItem={activeDragItem}
+    dropAnimation={DROP_ANIMATION}
+  >
+    {
+      ({ image }) => (
+        <DragPreview>
+          <img src={image} alt="" />
+        </DragPreview>
+      )
+    }
+  </DragOverlay>
+)

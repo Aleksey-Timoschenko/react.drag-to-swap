@@ -14,24 +14,22 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const PrintPageItems = ({ printItemsContainerId, printItems }) => {
-  return (
-    <Wrapper>
-      <SortableWrapper
-        id={printItemsContainerId}
-        items={printItems}
-      >
-        {printItems.map((image, index) => {
-          return (
-            <PrintPageItem
-              key={image}
-              image={image}
-              itemId={index}
-              itemsContainerId={printItemsContainerId}
-            />
-          );
-        })}
-      </SortableWrapper>
-    </Wrapper>
-  )
-}
+export const PrintPageItems = ({ printItemsContainerId, printItems }) => (
+  <Wrapper>
+    <SortableWrapper
+      id={printItemsContainerId}
+      items={printItems}
+    >
+      {printItems.map((image, index) => {
+        return (
+          <PrintPageItem
+            key={image}
+            image={image}
+            itemId={index}
+            itemsContainerId={printItemsContainerId}
+          />
+        );
+      })}
+    </SortableWrapper>
+  </Wrapper>
+)
